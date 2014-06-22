@@ -43,7 +43,7 @@ shinyServer(
                                                        input$LTAinput), 
                                               (input$STLinput + input$LTLinput))})
                 #check if thresholds for ratios are being exceeded
-                output$curET <- renderPrint({belowThreshCheck(input$curThresh, curRat((input$Cinput + input$ARinput + 
+                output$curET <- renderPrint({aboveThreshCheck(input$curThresh, curRat((input$Cinput + input$ARinput + 
                                                                                    input$Iinput + input$OLAinput), 
                                                                           input$STLinput))})
                 output$qET <- renderPrint({belowThreshCheck(input$qThresh, qRat((input$Cinput + input$ARinput + 

@@ -16,7 +16,7 @@ shinyUI(pageWithSidebar(
                         #kpi thresholds
                         h3("Set KPI Alert Thresholds"),
                         h4("(in percent)"),
-                        sliderInput("curThresh", "Current Ratio Threshold", value=0.9, min=0, max=5, step=0.1),
+                        sliderInput("curThresh", "Current Ratio Threshold", value=1.9, min=0, max=5, step=0.1),
                         sliderInput("qThresh", "Quick Ratio Threshold", value=0.9, min=0, max=5, step=0.1),
                         sliderInput("wcThresh", "Working Capital Ratio Threshold", value=0.9, min=0, max=5, step=0.1),
                         sliderInput("debtThresh", "Debt Ratio Threshold", value=0.6, min=0, max=1, step=0.1),
@@ -27,8 +27,8 @@ shinyUI(pageWithSidebar(
                         "In the sidebar, enter financial information about the assets and liabilities of your company.  
                         (Some default values are provided, all of which can be adjusted by entering new numbers and/or changing the sliders).
                         Then, select thresholds for financial ratios about which you would like to be alerted.  
-                        For Current Ratio, Quick Ratio, and Working Capital Ratio, the threshold specified will act as a maximum for warning.  
-                        For Debt Ratio, the threshold will act as a minimum for warning.
+                        For Quick Ratio and Working Capital Ratio, the threshold specified will act as a maximum for warning.  
+                        For Current Ratio and Debt Ratio, the threshold will act as a minimum for warning.
                         The application will also give you a notice if you are approaching a threshold, 
                         but have not yet crossed it.",
                         h4("Current Ratio:"),
